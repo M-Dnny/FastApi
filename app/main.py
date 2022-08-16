@@ -24,3 +24,7 @@ app.include_router(users.routers)
 app.include_router(posts.routers)
 app.include_router(auth.router)
 app.include_router(vote.router)
+
+@app.get("/")
+def get():
+    return {"data":"Fuck Society"}
