@@ -1,0 +1,7 @@
+Activate VENV command
+
+myenv\Scripts\activate
+
+Launch the server
+
+uvicorn app.main:app
