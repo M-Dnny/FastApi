@@ -5,3 +5,8 @@ myenv\Scripts\activate
 Launch the server
 
 uvicorn app.main:app
+
+
+alembic revision --autogenerate -m "add image_url in profile table" 
+
+alembic upgrade head

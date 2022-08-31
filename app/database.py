@@ -14,7 +14,6 @@ Base = declarative_base()
 def get_db():
     db = SessionLocal()
     try:
-        print("connected")
         yield db
     finally:
         db.close()

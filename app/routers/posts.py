@@ -37,7 +37,7 @@ async def get_post(db: session = Depends(get_db), current_user: int = Depends(oa
     my_post = db.query(models.Post, func.count(models.Vote.post_id).label("votes")).join(
         models.Vote, models.Vote.post_id == models.Post.id, isouter=True).group_by(models.Post.id).filter(
         models.Post.owner_id == current_user.id).all()
-        
+
     return my_post
 
 #  Create Post
