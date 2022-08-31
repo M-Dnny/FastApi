@@ -199,7 +199,8 @@ async def register(background_tasks: BackgroundTasks, user: schema.UserCreate = 
         db.commit()
         db.refresh(new_user)
 
-        image_url = f"http://127.0.0.1:8000/user/getimage/?image_id={new_user.id}"
+        # image_url = f"http://127.0.0.1:8000/user/getimage/?image_id={new_user.id}"
+        image_url = f"https://fastapi-danish.herokuapp.com/user/getimage/?image_id={new_user.id}"
 
         image_id_temp = new_user.id
 
