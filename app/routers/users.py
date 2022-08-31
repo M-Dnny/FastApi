@@ -76,7 +76,8 @@ async def upload_image(background_tasks: BackgroundTasks, upload=schema.profile,
             # db.commit()
             # db.refresh(upload_img)
 
-            image_url = f"http://127.0.0.1:8000/user/getimage/?image_id={upload_img.id}"
+            # image_url = f"http://127.0.0.1:8000/user/getimage/?image_id={upload_img.id}"
+            image_url = f"https://fastapi-danish.herokuapp.com/user/getimage/?image_id={upload_img.id}"
             print(image_url)
 
             # upload_img = models.Profile(
